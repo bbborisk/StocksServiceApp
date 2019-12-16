@@ -6,7 +6,7 @@ ruby '2.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 # Use sqlite3 as the database for Active Record
-gem 'devise'
+gem 'devise', '~> 4.7.1'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -29,6 +29,7 @@ gem "stock_quote", '~> 3.0.0'
 gem 'jwt'
 gem "devise_token_auth"
 gem "omniauth-google-oauth2"
+gem 'simple_token_authentication'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
