@@ -27,6 +27,8 @@ gem 'devise-bootstrap-views'
 gem 'bcrypt', '~> 3.1.7'
 gem "stock_quote", '~> 3.0.0'
 gem 'jwt'
+gem "devise_token_auth"
+gem "omniauth-google-oauth2"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
