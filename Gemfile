@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
 gem 'devise-bootstrap-views'
+gem 'bcrypt', '~> 3.1.7'
+gem "stock_quote", '~> 3.0.0'
+gem 'jwt'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
