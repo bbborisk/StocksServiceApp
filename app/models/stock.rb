@@ -5,6 +5,10 @@ class Stock < ApplicationRecord
 
       StockQuote::Stock.new(api_key: "sk_166dff3b7c4247c891e6f4418851bdbf")
 
+def self.find_by_ticker(ticker_symbol)
+  where(ticker: ticker_symbol).first #metod where pretra\uje bazu, a .first odabira objekat
+end
+
   def self.new_from_lookup(ticker_symbol)
     begin
       looked_up_stock =StockQuote::Stock.quote(ticker_symbol)
