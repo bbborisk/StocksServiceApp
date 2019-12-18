@@ -1,5 +1,7 @@
 class Stock < ApplicationRecord
-  has_secure_password
+  has_many :user_stocks
+  has_many :users, through: :user_stocks
+
 
       StockQuote::Stock.new(api_key: "sk_166dff3b7c4247c891e6f4418851bdbf")
 
