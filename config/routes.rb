@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :friendships
   get 'my_friends', to: "users#my_friends"
   get 'search_friends', to: "users#search"
+  post 'add_friend', to: "users#add_friend"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
