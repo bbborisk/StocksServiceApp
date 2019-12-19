@@ -10,9 +10,16 @@ class UsersController < ApplicationController
   end
 
   def search
-    puts params[:search_param]
-    @users = User.search(params[:search_param])
-    render json: @users
+    if params[:search_param].blank?
+      flash.now[:danger] = "Search bar is empty" #treba .now jer flash traje do refresha, a mi preko AJAXa renderujemo samo partial
+    else
+      @users = User.search(params[:search_param])
+      flash.now[:danger] = "No such friends" if @users.blank?
+    end
+    respond_to do |format|
+      format.js { render partial: 'friends/result' }
+    end
   end
+
 
 end
